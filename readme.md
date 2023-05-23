@@ -1,26 +1,28 @@
-## CONNECT DATABASE
+## SQL
 
-En mi caso debo tener mysql para linux, o en la terminal
+Tipos de sublenguajes principales
 
-USANDO LA TERMINAL
+[MATERIAL RECOMENDADA DE LECTURA](https://www.geeksforgeeks.org/sql-ddl-dql-dml-dcl-tcl-commands/)
 
-```
-mysql --host 127.0.0.1 -P 3306 -u root -p
-```
+-   DDL ==> DATA DEFINITION LANGUAGE
+-   DML ==> DATA MANIPULATION LANG
+-   TCL => TRANSACTION CONTROL LANG (no lo vamos a ver)
+-   DCL ==> DATA CONTROL LANG
 
-Entender lo que es una base de datos entendiendo una DER
+[INSERT DATA USANDO CSV](https://mysqlcode.com/import-csv-file-in-mysql-database/)
 
-DER ==> Diagrama de entiedad relacion
+INSERT CSV USANDO WORKBENCH ==> POR AHORA LES RECOMIENDO ESTA OPCION HASTA QUE VAYAN APRENDIENDO A MANEJAR DETALLES DE TERMINAL
 
-BACK UP => GENERAR UN BACK UP CON MYSQL DUMP
+CREACION DE DATABASE ==> CERVECERIA - UML --> - CREACION TABLAS Y MODIFICACIONES - POPULACION DE LAS TABLAS
 
-```
-mysqldump --host 127.0.0.1 -P 3306 -u root -p  beer_company > bk_beer.sql
-```
-
-RESTORE =>
+SENTENCIAS A USAR:
+DQL
 
 ```
-mysql --host 127.0.0.1 -P 3306 -u root -p beer_restore_bk < bk_beer.sql
+    SELECT * -- ES EL SELECTOR UNIVERSAL DE TODAS LAS COLUMNAS
+    FROM beer_tipo;
 
 ```
+
+BACKUP ==> POR AHORA RECOMIENDO TRABAJAR CON TERMINAL (ES MUCHO MÁS SENCILLO)
+RESTORE BACKUP ==>POR AHORA REALIZARLO POR MEDIO DE LA TERMINAL
