@@ -47,4 +47,16 @@ SELECT UPPER(nombre_cliente)
 FROM cliente;
 /*JOINS*/
 -- Explicar en clase, pues es un termino que hay que validar correctamente y explicarlo
+SELECT
+    f.id_factura
+,   f.fecha_factura
+,   f.metodo_pago
+,   c.nombre_cliente
+,   c.email
+
+FROM factura as f
+JOIN cliente as c
+
+ON f.id_cliente = c.id_cliente
 /*SUBQUERIES*/
+
